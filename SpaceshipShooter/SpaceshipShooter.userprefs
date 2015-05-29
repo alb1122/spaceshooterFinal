@@ -1,9 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\StartGame.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\controlEnemy.cs">
     <Files>
-      <File FileName="Assets\StartGame.cs" Line="11" Column="2" />
-      <File FileName="..\..\..\unity-spaceship-shooter-EpiTafio-KepaGonzalez\unity-spaceship-shooter-EpiTafio-KepaGonzalez\SpaceshipShooter\Assets\LoadOnClick.cs" Line="12" Column="2" />
+      <File FileName="Assets\ControlNave.cs" Line="123" Column="3" />
+      <File FileName="Assets\ControlAsteroide.cs" Line="21" Column="1" />
+      <File FileName="Assets\GeneradorAsteroides.cs" Line="61" Column="4" />
+      <File FileName="Assets\ControlMarcador.cs" Line="9" Column="1" />
+      <File FileName="..\..\SpaceshipShooter\Assets\ControlDisparo.cs" Line="1" Column="1" />
+      <File FileName="..\..\SpaceshipShooter\Assets\ControlAsteroide.cs" Line="61" Column="1" />
+      <File FileName="..\..\SpaceshipShooter\Assets\ControlNave.cs" Line="218" Column="4" />
+      <File FileName="..\..\SpaceshipShooter\Assets\ControlMarcador.cs" Line="1" Column="1" />
+      <File FileName="..\..\SpaceshipShooter\Assets\GeneradorAsteroides.cs" Line="1" Column="1" />
+      <File FileName="..\..\SpaceshipShooter\Assets\script.cs" Line="69" Column="1" />
+      <File FileName="Assets\controlEnemy.cs" Line="11" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

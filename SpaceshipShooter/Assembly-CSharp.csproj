@@ -56,7 +56,8 @@
      <Compile Include="Assets\LoadLevel.cs" />
      <Compile Include="Assets\StartGame.cs" />
      <Compile Include="Assets\controlBomba.cs" />
-     <Compile Include="Assets\script.cs" />
+     <Compile Include="Assets\controlEnemy.cs" />
+     <Compile Include="Assets\generardorEnemigos.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

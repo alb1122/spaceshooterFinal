@@ -115,7 +115,9 @@ public class ControlNave : MonoBehaviour
 		posicionXd = (horzExtent  )-1;
 		if (muerto) {
 
-
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				Disparar ();
+			}
 		
 	
 		
@@ -232,8 +234,8 @@ public class ControlNave : MonoBehaviour
 		muerto = true;
 
 		if (muerto) {
-			disparo.GetComponent<Renderer>().enabled=false;
-			disparo.GetComponent<Collider2D>().enabled = false;
+			disparo.GetComponent<Renderer>().enabled=true;
+			disparo.GetComponent<Collider2D>().enabled = true;
 			transform.position=new Vector3(0,0,0);
 			tmuerto=Time.time+3;
 			GetComponent<Animator>().runtimeAnimatorController=muertoAnimacion;

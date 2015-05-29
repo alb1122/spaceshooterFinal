@@ -5,10 +5,10 @@ using System.Collections;
 public class ControlMarcador : MonoBehaviour
 {
 	// Puntos ganados en la partida
-	public int puntos = 0;
+	public  int puntos = 0;
 
 	// Vidas
-	public int vidas = 5;
+	public  int vidas = 5;
 
 	// Referencia para el resto de objetos
 	public GameObject marcador;
@@ -26,5 +26,8 @@ public class ControlMarcador : MonoBehaviour
 		// Si el número de vidas llega a 0, reiniciamos el juego
 		if(vidas == 0)
 			Application.LoadLevel(Application.loadedLevel);
+		if (puntos == 5000) {
+
+		}
 	}
 }
