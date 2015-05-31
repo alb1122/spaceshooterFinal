@@ -50,7 +50,8 @@ public class generardorEnemigos : MonoBehaviour {
 		asteroide.AddTorque (Random.value * 10f);
 		float escala = Random.Range (.5f, 0.7f);
 		asteroide.transform.localScale = new Vector3 (escala, escala, escala);
-		asteroide.WakeUp ();
+		//asteroide.transform.Translate (Vector3.down * 100f * Time.deltaTime);
+		//asteroide.WakeUp ();
 		//asteroide.mass = -1;
 
 	}

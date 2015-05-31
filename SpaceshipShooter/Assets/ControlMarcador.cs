@@ -24,8 +24,10 @@ public class ControlMarcador : MonoBehaviour
 		t.text += "Vidas: "+vidas.ToString () + "\n";
 
 		// Si el número de vidas llega a 0, reiniciamos el juego
-		if(vidas == 0)
-			Application.LoadLevel(Application.loadedLevel);
+		if (vidas == 0) {
+			Application.LoadLevel (2);
+
+		}
 		if (puntos == 5000) {
 
 		}

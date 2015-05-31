@@ -32,6 +32,7 @@ public class controlEnemy : MonoBehaviour {
 			ndisp = ndisp - 1;
 			coll.gameObject.GetComponent<Renderer> ().enabled = false;
 			coll.gameObject.GetComponent<Collider2D> ().enabled = false;
+			coll.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 1f;
 			Instantiate (exp, transform.position, transform.rotation);
 			if (ndisp == 0) {
 				marcador.GetComponent<ControlMarcador> ().puntos += puntos;

@@ -111,52 +111,52 @@ public class ControlNave : MonoBehaviour
 	{
 		horzExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
 		// Izquierda
-		posicionXi = (horzExtent  * -1)+1;
-		posicionXd = (horzExtent  )-1;
-		if (muerto) {
-
-			if (Input.GetKeyDown (KeyCode.Space)) {
-				Disparar ();
+		posicionXi = (horzExtent * -1) + 1;
+		posicionXd = (horzExtent) - 1;
+//		if (muerto) {
+//
+//			if (Input.GetKeyDown (KeyCode.Space)) {
+//				Disparar ();
+//			}
+//		
+//	
+//		
+//		
+//		} else {
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+			//posicionXi=transform.position.x;
+			if (transform.position.x >= posicionXi) {
+				transform.Translate (Vector3.left * velocidadNave * Time.deltaTime);
+			} else {
+				transform.Translate (Vector3.left * velocidadNave * Time.deltaTime * 0);
 			}
-		
-	
-		
-		
-		} else {
-			if (Input.GetKey (KeyCode.LeftArrow)) {
-				//posicionXi=transform.position.x;
-				if (transform.position.x >= posicionXi) {
-					transform.Translate (Vector3.left * velocidadNave * Time.deltaTime);
-				} else {
-					transform.Translate (Vector3.left * velocidadNave * Time.deltaTime * 0);
-				}
 
 				
 
-			}
+		}
 
-			// Derecha
-			if (Input.GetKey (KeyCode.RightArrow)) {
-				if (transform.position.x <= posicionXd) {
-					transform.Translate (Vector3.right * velocidadNave * Time.deltaTime);
-				} else {
+		// Derecha
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			if (transform.position.x <= posicionXd) {
+				transform.Translate (Vector3.right * velocidadNave * Time.deltaTime);
+			} else {
 
-					transform.Translate (Vector3.right * velocidadNave * Time.deltaTime * 0);
-				}
-			}
-
-			// Disparo
-			if (Input.GetKeyDown (KeyCode.Space)) {
-				Disparar ();
-			}
-			if (Input.GetKeyDown (KeyCode.LeftControl)) {
-				// Cada cierto tiempo, fabricamos un asteroide
-				if (bombas > 0) {
-
-					DispararBomba ();
-				}
+				transform.Translate (Vector3.right * velocidadNave * Time.deltaTime * 0);
 			}
 		}
+
+		// Disparo
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			Disparar ();
+		}
+		if (Input.GetKeyDown (KeyCode.LeftControl)) {
+			// Cada cierto tiempo, fabricamos un asteroide
+			if (bombas > 0) {
+
+				DispararBomba ();
+			}
+		}
+
 //		if (muerto) {
 //			secondsCounter += Time.deltaTime;
 //			if (secondsCounter >= secondsToCount)
@@ -184,12 +184,12 @@ public class ControlNave : MonoBehaviour
 //			}
 //		}
 
-	if (Time.time > tmuerto-1) {
-		//transform.position=new Vector3(0,0,0);
+		if (Time.time > tmuerto - 1) {
+			//transform.position=new Vector3(0,0,0);
 		
-		GetComponent<Renderer> ().enabled = false;
-	}
-	if (Time.time > tmuerto - 3) {
+			GetComponent<Renderer> ().enabled = false;
+		}
+		if (Time.time > tmuerto - 3) {
 			//transform.position=new Vector3(0,0,0);
 		
 			GetComponent<Renderer> ().enabled = true;
@@ -197,17 +197,18 @@ public class ControlNave : MonoBehaviour
 			GetComponent<Renderer> ().enabled = false;
 		}
 
-	if (Time.time > tmuerto) {
-				//transform.position=new Vector3(0,0,0);
+		if (Time.time > tmuerto) {
+			//transform.position=new Vector3(0,0,0);
 
-				GetComponent<Renderer> ().enabled = true;
-				GetComponent<CircleCollider2D> ().enabled = true;
-				disparo.GetComponent<Renderer> ().enabled = true;
-				disparo.GetComponent<Collider2D> ().enabled = true;
-			GetComponent<Animator>().runtimeAnimatorController=vivoAnimacion;
-				muerto = false;
-			}
+			GetComponent<Renderer> ().enabled = true;
+			GetComponent<CircleCollider2D> ().enabled = true;
+			disparo.GetComponent<Renderer> ().enabled = true;
+			disparo.GetComponent<Collider2D> ().enabled = true;
+			GetComponent<Animator> ().runtimeAnimatorController = vivoAnimacion;
+			muerto = false;
+//			}
 		
+		}
 	}
 
 	void OnCollisionEnter2D (Collision2D coll)
